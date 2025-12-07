@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Task Manager App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <!-- AUTH -->
+  <div id="auth-container">
+    <div class="auth-box">
+      <h2>Login / Register</h2>
+      <input id="name" placeholder="Name" />
+      <input id="email" placeholder="Email" />
+      <input id="password" type="password" placeholder="Password" />
+      <button onclick="registerUser()">Register / Login</button>
+    </div>
+  </div>
+
+  <!-- MAIN APP -->
+  <div id="main-app">
+    <header>
+      <div>Task Manager</div>
+      <button onclick="logout()">Logout</button>
+    </header>
+
+    <div class="task-container">
+      <div id="pending" class="section"></div>
+      <div id="completed" class="section"></div>
+    </div>
+
+    <div id="add-task-btn" onclick="openPopup()">+ Add Task</div>
+  </div>
+
+  <!-- POPUP -->
+  <div id="popup">
+    <div class="popup-box">
+      <h3>Add / Edit Task</h3>
+      <input id="task-title" placeholder="Title" />
+      <textarea id="task-desc" placeholder="Description"></textarea>
+      <button onclick="saveTask()">Save</button>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
